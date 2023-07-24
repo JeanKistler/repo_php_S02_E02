@@ -21,11 +21,18 @@ $films = [
     "Le retour du Jedi",
 ];
 
+$rooms = [
+  'Athéna',
+  'Dyonisos',
+  'Hadès',
+  'Zeus',
+];
+
 require_once "template/header.php";
 ?>
 
 <section>
-    <h2 class="page__title">En salle</h2>
+<h2 class="page__title">Actuellement au cinéma</h2>
 
     <!-- On va mettre un <h3> par film -->
 
@@ -63,6 +70,21 @@ require_once "template/header.php";
         <?php
     }
     ?>
+</section>
+
+<section>
+
+    <h2 class="page__title">Salles</h2>
+    <ul>
+        <?php
+
+        foreach ($rooms as $room) {
+            ?>
+            <li><?= $room ?> </li>
+            <?php
+        }
+        ?>
+    </ul>
 </section>
 
 <?php
