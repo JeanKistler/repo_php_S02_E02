@@ -104,12 +104,70 @@ require_once "template/header.php";
                 <span class="prices__item-desc">Age</span> <span class="prices__item-value">Tarif unitaire</span>
             </h3>
             <ul>
-                <li class="prices__item">
-                    <span class="prices__item-desc">.. ans</span> <span class="prices__item-value">.... &euro;</span>
-                </li>
-                <li class="prices__item">
-                    <span class="prices__item-desc">.. ans</span> <span class="prices__item-value">.... &euro;</span>
-                </li>
+                <?php
+                /*
+                $age = 1;
+                while ($age <= 99) {
+                    // On calcule le montant qu'il doit payer
+                    if ($age < 14) {
+                        $montant = $tarifEnfant;
+                    }
+                    // On teste ensuite les ages pour le tarif réduit.
+                    // Ici, pas besoin de préciser que l'age doit etre supérieur à 14.
+                    // Si l'age est inférieur à 14, le premier if s'est déjà déclenché. PHP ne passera donc pas dans le elseif.
+                    elseif ($age > 60 || $age < 16) {
+                        $montant = $tarifReduit;
+                    }
+                    // Dans tous les autres cas, on a le tarif plein
+                    else {
+                        $montant = $tarifPlein;
+                    }
+
+                    // Ici on va construire le html pour l'age courant.
+                    ?>
+
+                    <li class="prices__item">
+                        <span class="prices__item-desc"><?= $age; ?> ans</span>
+                        <span class="prices__item-value"><?= number_format($montant, 2, ',', ' '); ?> &euro;</span>
+                    </li>
+
+                    <?php
+                    // $age = $age + 1;
+                    // $age += 1;
+                    // $age++;
+                    ++$age;
+                }
+                */
+                ?>
+
+                <?php
+                for ($age = 1; $age <= 99; $age++) {
+                    // On calcule le montant qu'il doit payer
+                    if ($age < 14) {
+                        $montant = $tarifEnfant;
+                    }
+                    // On teste ensuite les ages pour le tarif réduit.
+                    // Ici, pas besoin de préciser que l'age doit etre supérieur à 14.
+                    // Si l'age est inférieur à 14, le premier if s'est déjà déclenché. PHP ne passera donc pas dans le elseif.
+                    elseif ($age > 60 || $age < 16) {
+                        $montant = $tarifReduit;
+                    }
+                    // Dans tous les autres cas, on a le tarif plein
+                    else {
+                        $montant = $tarifPlein;
+                    }
+
+                    // Ici on va construire le html pour l'age courant.
+                    ?>
+
+                    <li class="prices__item">
+                        <span class="prices__item-desc"><?= $age; ?> ans</span>
+                        <span class="prices__item-value"><?= number_format($montant, 2, ',', ' '); ?> &euro;</span>
+                    </li>
+
+                    <?php
+                }
+                ?>
             </ul>
         </div>
     </div>

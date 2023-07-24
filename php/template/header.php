@@ -27,13 +27,13 @@
 
             <nav class="header__menu">
                 <ul class="header__menu-container">
-                    <li class="header__menu-item">
+                    <li class="header__menu-item header__menu-item--active">
                         <a href="index.html">Accueil</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="#">En salle</a>
                     </li>
-                    <li class="header__menu-item header__menu-item--active">
+                    <li class="header__menu-item">
                         <a href="tarifs.html">Tarifs</a>
                     </li>
                     <li class="header__menu-item">
