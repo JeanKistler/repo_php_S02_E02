@@ -28,13 +28,13 @@
             <nav class="header__menu">
                 <ul class="header__menu-container">
                     <li class="header__menu-item header__menu-item--active">
-                        <a href="index.html">Accueil</a>
+                        <a href="index.php">Accueil</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#">En salle</a>
+                        <a href="ensalle.php">En salle</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="tarifs.html">Tarifs</a>
+                        <a href="tarifs.php">Tarifs</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="#">Nous contacter</a>
